@@ -441,19 +441,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // 点击联系方式可编辑（方便修改）
-        const editableElements = ['name', 'job-title', 'phone', 'email', 'location', 'github', 'intro'];
-        editableElements.forEach(id => {
-            const element = document.getElementById(id);
-            element.addEventListener('click', function() {
-                const newValue = prompt('请输入新的内容', this.textContent);
-                if (newValue !== null && newValue.trim() !== '') {
-                    this.textContent = newValue.trim();
-                }
-            });
-        });
-    </script>
 </body>
 </html>
