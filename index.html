@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft Yahei', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* 头部样式 */
+        .resume-header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .resume-header .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info i {
+            font-size: 18px;
+        }
+
+        /* 主体内容样式 */
+        .resume-body {
+            padding: 40px 50px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        /* 侧边栏样式 */
+        .sidebar {
+            border-right: 1px solid #eee;
+            padding-right: 20px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* 技能模块 */
+        .skill-item {
+            margin-bottom: 12px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 4px;
+        }
+
+        /* 主内容区样式 */
+        .main-content {
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #3498db;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 13px;
+            width: 2px;
+            height: calc(100% - 10px);
+            background-color: #eee;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .timeline-date {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .timeline-company {
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-desc {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .resume-body {
+                grid-template-columns: 1fr;
+                padding: 20px 30px;
+                gap: 20px;
+            }
+
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-right: 0;
+                padding-bottom: 20px;
+            }
+
+            .main-content {
+                padding-left: 0;
+            }
+
+            .resume-header {
+                padding: 30px 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    </style>
+    <!-- 引入图标库 -->
+     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- 头部区域 -->
+        <div class="resume-header">
+            <h1 id="name">某只苦力怕</h1>
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> <span id="phone">13859202416</span></div>
+                <div><i class="fab fa-qq"></i> <span id="qq">2420038530</span></div>
+                <div><i class="fas fa-map-marker-alt"></i> <span id="location">福建省漳州市</span></div>
+                <div><i class="fab fa-bilibili"></i> <span id="bilibili">某只苦力怕6</span></div>
+            </div>
+        </div>
+
+        <!-- 主体内容 -->
+        <div class="resume-body">
+            <!-- 侧边栏 -->
+            <div class="sidebar">
+                <!-- 个人简介 -->
+                <div class="section">
+                    <h2 class="section-title">个人简介</h2>
+                    <p id="intro">圈名：某只苦力怕，6年网易我的世界中国版PE(手游)模组开发和玩法地图开发经验，熟悉多种类型模组的开发流程和技巧，认识圈内多名开发者，参加过网易2025年开发者大会。</p>
+                </div>
+
+                <!-- 专业技能 -->
+                <div class="section">
+                    <h2 class="section-title">专业技能</h2>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Python</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>addon开发</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>TypeScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>C语言</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>HTML/CSS</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Java</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 主内容区 -->
+            <div class="main-content">
+                <!-- 工作经历 -->
+                <div class="section">
+                    <h2 class="section-title">工作经历</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">个人开发者</div>
+                            <div class="timeline-date">2020.02 - 2024.08</div>
+                        </div>
+                        <div class="timeline-company">账号：沦陷的王国</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>账号粉丝数：6万+</li>
+                                <li>账号作品总下载量：200万+</li>
+                                <li>账号付费作品总下载量：1万+</li>
+                                <li>账号付费作品收益：￥8201.14元</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">秋月之光主程序</div>
+                            <div class="timeline-date">2024.08 - 2026.02</div>
+                        </div>
+                        <div class="timeline-company">账号：秋月之光工作室</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>为账号开发制作21个已发布模组、4个未发布模组</li>
+                                <li>将账号等级提升至创造大师LV1</li>
+                                <li>账号付费作品总下载量：10万+</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 教育背景 -->
+                <div class="section">
+                    <h2 class="section-title">教育背景</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">电子信息工程</div>
+                            <div class="timeline-date">2022.09 - 2025.07</div>
+                        </div>
+                        <div class="timeline-company">泉州海洋职业学院 | 大专毕业</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>主修课程：计算机网络、C语言程序设计</li>
+                                <li>GPA：3.8/4.0，专业排名前5%</li>
+                                <li>2023年11月8日，代表学校参加“第十届海峡两岸暨港澳大学生职业技能大赛”信创运维技能赛项，获得第47名</li>
+                                <li>通过全国计算机等级考试二级 Python 语言程序设计（NCRE-2）认证</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">人工智能</div>
+                            <div class="timeline-date">2025.07 - 至今</div>
+                        </div>
+                        <div class="timeline-company">福州外语外贸学院 | 本科在读</div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>主修课程：深度学习、数据结构、python程序设计、Java程序设计</li>
+                                <li>熟练掌握Python、Java等编程语言</li>
+                                <li>灵活运用人工智能进行项目开发</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目经验 -->
+                <div class="section">
+                    <h2 class="section-title">项目经验</h2>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">网易知识库教程 & MCS 内容库作品开发</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>国内最早一批推荐网易开设内容库的开发者之一</li>
+                                <li>国内早期参与网易知识库和内容库建设的开发者之一</li>
+                                <li>2022.10：《制作原版可对话生物》获知识库分享激励月“必看教程奖”</li>
+                                <li>2022.11：《制作原版可对话生物》获内容库征集活动三等奖</li>
+                                <li>2023.01：《手把手教你制作网易模组更多弓》获“必看教程奖”</li>
+                                <li>2023.03：《更方便修改的射击模组雏形》获二等奖，《function和python结合实例》获三等奖</li>
+                                <li>2023.06：《套装零件》获内容库征集一等奖</li>
+                                <li>2023.12：《纯UI小游戏2048》获季度评选一等奖</li>
+                                <li>2024.03：《万用飞行生物零件》获季度评选一等奖</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">投票生物系列</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>与B站UP主 HolyStar圣星长期合作，在《我的世界》官方正式更新前，提前实现 Minecraft Live 投票生物模组开发并免费发布，完成2022、2023年度投票生物制作</li>
+                                <li>入职秋月之光期间，负责该项目优化与维护，新增2020、2021年度投票生物及2017年投票生物「野火」，并推出付费版本</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">纯UI小游戏系列</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>独立研究并开发纯UI小游戏模组，受《致悦灵的礼物》玩法启发，探索《我的世界》中少见的UI视角游戏开发模式</li>
+                                <li>完成作品包括：MC卡牌对决、简易小钢琴、纯UI小游戏2048，形成完整独立项目系列</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">文文工作室合作系列</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>与B站UP主 文文DADA 合作开发，在《我的世界》基岩版实现其视频数据包功能，打造高人气玩法模组</li>
+                                <li>完成作品包括：生存挑战系列（主包，定价1000钻石）、木头变矿物、当矿物变为块、靠近生物会爆炸、脚底生成手持物品、所有伤害随机、踩到方块复制、重生获得BUFF等</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">快速生成系列</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>参考同类快速生成项目自主研究开发，所有作品均免费开源发布</li>
+                                <li>完成作品包括：苦力怕超多矿物（由苦力怕一键生成工具生成）、苦力怕枪械生成工具</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <div class="timeline-title">网络资源利用系列</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>整合爱给网的网络资源进行《我的世界》模组开发</li>
+                                <li>完成作品包括：更多弓、传奇翅膀</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 点击联系方式可编辑（方便修改）
+        const editableElements = ['name', 'job-title', 'phone', 'email', 'location', 'github', 'intro'];
+        editableElements.forEach(id => {
+            const element = document.getElementById(id);
+            element.addEventListener('click', function() {
+                const newValue = prompt('请输入新的内容', this.textContent);
+                if (newValue !== null && newValue.trim() !== '') {
+                    this.textContent = newValue.trim();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
