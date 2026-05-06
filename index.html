@@ -11,13 +11,11 @@
             box-sizing: border-box;
             font-family: 'Microsoft Yahei', sans-serif;
         }
-
         body {
             background-color: #f5f5f5;
             line-height: 28px;
             color: #333;
         }
-
         .box {
             max-width: 900px;
             margin: 30px auto;
@@ -26,55 +24,45 @@
             border-radius: 8px;
             overflow: hidden;
         }
-
         .box_head {
             background: linear-gradient(135deg, #2c3e50, #34495e);
             color: #fff;
             padding: 40px 50px;
             text-align: center;
         }
-
         .box_head h1 {
             font-size: 40px;
             margin-bottom: 10px;
         }
-
         .box_head_data {
             text-align: center;
             margin-top: 15px;
         }
-
         .box_head_data div {
             display: inline-block;
             vertical-align: middle;
             margin: 0 10px;
         }
-
         .box_head_data i {
             font-size: 18px;
             margin-right: 8px;
         }
-
         .box_body {
             height: max-content;
             padding: 40px 50px;
         }
-
         .box_body_clear {
             clear: both;
         }
-
         .left {
             width: 33.333%;
             float: left;
             border-right: 1px solid #eee;
             padding-right: 20px;
         }
-
         .main {
             margin-bottom: 30px;
         }
-
         .main_title {
             font-size: 21px;
             color: #2c3e50;
@@ -82,76 +70,62 @@
             padding-bottom: 8px;
             margin-bottom: 15px;
         }
-
         .skill_icon {
             margin-bottom: 12px;
         }
-
         .skill_name {
             margin-bottom: 5px;
             font-size: 15px;
             line-height: 15px;
             height: 20px;
         }
-
         .skill_name .skill_name_left {
             float: left;
         }
-
         .skill_name .skill_name_right {
             float: right;
         }
-
         .skill_progress_bar {
             height: 8px;
             background-color: #eee;
             border-radius: 4px;
         }
-
         .skill_progress {
             height: 100%;
             background-color: #3498db;
             border-radius: 4px;
         }
-
         .right {
             width: 66.666%;
             float: right;
             padding-left: 20px;
         }
-
         .timeline_head {
             margin-bottom: 8px;
         }
-
         .timeline_head_clear {
             clear: both;
         }
-
         .timeline_title {
             font-weight: bold;
             color: #2c3e50;
             float: left;
         }
-
         .timeline_date {
             color: #777;
             font-size: 15px;
             float: right;
         }
-
         .timeline_down_title {
             color: #555;
             margin-bottom: 8px;
             font-size: 15px;
         }
-
         .timeline_icon {
             margin-bottom: 25px;
             position: relative;
             padding-left: 20px;
         }
-
         .timeline_icon::before {
             content: '';
             position: absolute;
@@ -163,7 +137,6 @@
             background-color: #3498db;
             z-index: 2;
         }
-
         .timeline_icon::after {
             content: '';
             position: absolute;
@@ -174,22 +147,18 @@
             background-color: #eee;
             z-index: 1;
         }
-
         .timeline_main {
             color: #666;
             font-size: 15px;
         }
-
         .timeline_main ul {
             list-style: none;
             padding-left: 0;
         }
-
         .timeline_main li {
             position: relative;
             padding-left: 0px;
         }
-
         .timeline_main li::before {
             content: "";
             position: absolute;
@@ -201,12 +170,17 @@
             background-color: #ccc;
             z-index: 2;
         }
-
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 768px) {
             .box_body {
                 padding: 20px 30px;
             }
-
             .left {
                 width: 100%;
                 float: none;
@@ -216,27 +190,22 @@
                 padding-bottom: 20px;
                 margin-bottom: 20px;
             }
-
             .right {
                 width: 100%;
                 float: none;
                 padding-left: 0;
             }
-
             .box_head {
                 padding: 30px 20px;
             }
-
             .box_head_data {
                 font-size: 16px;
             }
-
             .box_head_data div {
                 display: block;
                 margin: 10px 0;
                 text-align: center;
             }
-
             .box_head_data i {
                 display: inline-block;
                 margin-right: 8px;
@@ -407,13 +376,13 @@
                             <ul>
                                 <li>国内最早一批推荐网易开设内容库的开发者之一</li>
                                 <li>国内早期参与网易知识库和内容库建设的开发者之一</li>
-                                <li>2022.10：《制作原版可对话生物》获知识库分享激励月“必看教程奖”</li>
-                                <li>2022.11：《制作原版可对话生物》获内容库征集活动三等奖</li>
-                                <li>2023.01：《手把手教你制作网易模组更多弓》获“必看教程奖”</li>
-                                <li>2023.03：《更方便修改的射击模组雏形》获二等奖，《function和python结合实例》获三等奖</li>
-                                <li>2023.06：《套装零件》获内容库征集一等奖</li>
-                                <li>2023.12：《纯UI小游戏2048》获季度评选一等奖</li>
-                                <li>2024.03：《万用飞行生物零件》获季度评选一等奖</li>
+                                <li>2022.10：《制作原版可对话生物》获知识库分享激励月“必看教程奖”<a href="award1.html" target="_blank">[查看]</a></li>
+                                <li>2022.11：《制作原版可对话生物》获内容库征集活动三等奖<a href="award2.html" target="_blank">[查看]</a></li>
+                                <li>2023.01：《手把手教你制作网易模组更多弓》获“必看教程奖”<a href="award3.html" target="_blank">[查看]</a></li>
+                                <li>2023.03：《更方便修改的射击模组雏形》获二等奖<a href="award4.html" target="_blank">[查看]</a>，《function和python结合实例》获三等奖<a href="award5.html" target="_blank">[查看]</a></li>
+                                <li>2023.06：《套装零件》获内容库征集一等奖<a href="award6.html" target="_blank">[查看]</a></li>
+                                <li>2023.12：《纯UI小游戏2048》获季度评选一等奖<a href="award7.html" target="_blank">[查看]</a></li>
+                                <li>2024.03：《万用飞行生物零件》获季度评选一等奖<a href="award8.html" target="_blank">[查看]</a></li>
                             </ul>
                         </div>
                     </div>
